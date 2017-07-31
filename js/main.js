@@ -1,6 +1,7 @@
 $(function() {
   let cup = $(".cup");
   let cupContent = $(".cupContent");
+  // let cupContentP = $(".cupContent p");
   let powerOn = $(".switch");
   let drops = $(".coffeeDrops");
   let btnNext = $(".btnNext span");
@@ -72,7 +73,15 @@ $(function() {
     menu.fadeToggle(200);
   }
 
+  let clearContent = function() {
+    cupContent.remove("p");
+    cupContent.animate({
+      height: "0"
+    }, 200);    
+  }
+
   let fillEspresso = function() {
+    clearContent();
     toggleBeetwenMenu();
     animateDrops();
     stopPowerOn();
@@ -80,13 +89,13 @@ $(function() {
       height: "4rem"
     }, 5000, function(){
       stopDrops();
-      let $espressoContent = $("<p class='espressoContent'>Espresso<p/>");
-      cupContent.append($espressoContent);
+      let espressoContent = $("<p class='espressoContent'>Espresso<p/>");
+      cupContent.append(espressoContent);
     });
   }
 
 
-  // powerOn.on("click", animateContent);
+
   // powerOn.on("click", animateDrops);
 
 
