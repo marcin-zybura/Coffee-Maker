@@ -1,9 +1,10 @@
 $(function() {
   let cup = $(".cup");
   let cupContent = $(".cupContent");
-  // let cupContentP = $(".cupContent p");
+  let cupContentP = $(".cupContent p");
   let powerOn = $(".switch");
   let drops = $(".coffeeDrops");
+  let drop = $(".drop");
   let btnNext = $(".btnNext span");
   let coffeeContainer = $(".coffeeContainer");
   let dialogBox = $(".dialogBox");
@@ -52,13 +53,25 @@ $(function() {
   }
 
   let animateDrops = function() {
-    drops.css({
+    drops.children().eq(0).css({
       "animation": "animateDrops 0.8s linear infinite"
+    });
+    drops.children().eq(1).css({
+      "animation": "animateDrops 0.8s linear infinite",
+      "animation-delay": "0.2s"
+    });
+    drops.children().eq(2).css({
+      "animation": "animateDrops 0.8s linear infinite",
+      "animation-delay": "0.4s"
+    });
+    drops.children().eq(3).css({
+      "animation": "animateDrops 0.8s linear infinite",
+      "animation-delay": "0.6s"
     });
   }
 
   let stopDrops = function() {
-    drops.css({
+    drops.children().css({
       "animation-name": "none"
     });
   }
@@ -74,10 +87,10 @@ $(function() {
   }
 
   let clearContent = function() {
-    cupContent.remove("p");
+    cupContent.children("p").remove();
     cupContent.animate({
       height: "0"
-    }, 200);    
+    }, 200);
   }
 
   let fillEspresso = function() {
@@ -89,7 +102,7 @@ $(function() {
       height: "4rem"
     }, 5000, function(){
       stopDrops();
-      let espressoContent = $("<p class='espressoContent'>Espresso<p/>");
+      let espressoContent = $("<p>Espresso</p>");
       cupContent.append(espressoContent);
     });
   }
@@ -115,5 +128,8 @@ $(function() {
 
 
   powerOn.on("click", showMenu);
+  // powerOn.on("click", function(){
+  //   cupContent.children("p").remove();
+  // });
   espresso.on("click", fillEspresso);
 });
