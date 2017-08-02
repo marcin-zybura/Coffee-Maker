@@ -19,6 +19,9 @@ $(function() {
   let flatWhite = $(".flatWhite");
   let caffeBreve = $(".caffeBreve");
   let cappuccino = $(".cappuccino");
+  let caffeMocha = $(".caffeMocha");
+  let americano = $(".americano");
+  let latteMacchiato = $(".latteMacchiato");
   // <<< END SECTION OF VARIABLES DECLARATION >>>
 
 
@@ -301,6 +304,101 @@ $(function() {
       });
     });
   }
+
+  let fillCaffeMocha = function() {
+    let coffee = $("<div class='coffee'></div>");
+    let chocolateSyrup = $("<div class='chocolateSyrup'></div>")
+    let steamedMilk = $("<div class='steamedMilk'></div>");
+    let whippedCream = $("<div class='whippedCream'></div>");
+    clearContent();
+    toggleBeetwenMenu();
+    animateDrops();
+    stopPowerOn();
+    cupContent.prepend(coffee);
+    cupContent.children().eq(0).animate({
+      height: "4rem"
+    }, 5000, function(){
+      let espressoContent = $("<p>ESPRESSO</p>");
+      cupContent.children().eq(0).append(espressoContent);
+      cupContent.prepend(chocolateSyrup);
+      chocolateSyrup.css("bottom", "4rem");
+      cupContent.children().eq(0).animate({
+        height: "1.5rem"
+      }, 3000, function(){
+          let chocolateSyrupContent = $("<p>CHOCOLATE SYRUP</p>");
+          cupContent.children().eq(0).append(chocolateSyrupContent);
+          cupContent.prepend(steamedMilk);
+          steamedMilk.css("bottom", "5.5rem");
+          cupContent.children().eq(0).animate({
+            height: "3rem"
+          }, 3000, function(){
+            let steamedMilkContent = $("<p>STEAMED MILK</p>");
+            cupContent.children().eq(0).append(steamedMilkContent);
+
+            cupContent.prepend(whippedCream);
+            whippedCream.css("bottom", "8.5rem");
+            cupContent.children().eq(0).animate({
+              height: "3rem"
+            }, 3000, function(){
+              stopDrops();
+              let whippedCreamContent = $("<p>WHIPPED CREAM</p>");
+              cupContent.children().eq(0).append(whippedCreamContent);
+            });
+          });
+      });
+    });
+  }
+
+  let fillAmericano = function() {
+    let coffee = $("<div class='coffee'></div>");
+    let hotWater = $("<div class='hotWater'></div>");
+    clearContent();
+    toggleBeetwenMenu();
+    animateDrops();
+    stopPowerOn();
+    cupContent.prepend(coffee);
+    cupContent.children().eq(0).animate({
+      height: "4rem"
+    }, 5000, function(){
+      let espressoContent = $("<p>ESPRESSO</p>");
+      cupContent.children().eq(0).append(espressoContent);
+      cupContent.prepend(hotWater);
+      hotWater.css("bottom", "4rem");
+      cupContent.children().eq(0).animate({
+        height:"10rem"
+      }, 5000, function(){
+        stopDrops();
+        let hotWaterContent = $("<p>HOT WATER</p>");
+        cupContent.children().eq(0).append(hotWaterContent);
+      });
+    });
+  }
+
+  let fillLatteMacchiato = function() {
+    let coffee = $("<div class='coffee'></div>");
+    let steamedMilk = $("<div class='steamedMilk'></div>");
+    clearContent();
+    toggleBeetwenMenu();
+    animateDrops();
+    stopPowerOn();
+    cupContent.prepend(steamedMilk);
+    steamedMilk.css("bottom", "0");
+    cupContent.children().eq(0).animate({
+      height: "7rem"
+    }, 5000, function(){
+      let steamedMilkContent = $("<p>STEAMED MILK</p>");
+      cupContent.children().eq(0).append(steamedMilkContent);
+      cupContent.prepend(coffee);
+      coffee.css("bottom", "7rem");
+      cupContent.children().eq(0).animate({
+        height:"3rem"
+      }, 4000, function(){
+        stopDrops();
+        let espressoContent = $("<p>ESPRESSO</p>");
+        cupContent.children().eq(0).append(espressoContent);
+      });
+    });
+  }
   // <<< END SECTION OF FUNCTIONS DECLARATION >>>
 
 
@@ -325,4 +423,7 @@ $(function() {
   flatWhite.on("click", fillFlatWhite);
   caffeBreve.on("click", fillCaffeBreve);
   cappuccino.on("click", fillCappuccino);
+  caffeMocha.on("click",fillCaffeMocha);
+  americano.on("click", fillAmericano);
+  latteMacchiato.on("click", fillLatteMacchiato);
 });

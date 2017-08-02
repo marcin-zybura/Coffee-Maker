@@ -413,7 +413,31 @@ body {
 }
 
 .chocolateSyrup {
+  width: 100%;
+  background-color: violet;
+  background-position: top right;
+  position: absolute;
+  // bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
 
+.hotWater {
+  width: 100%;
+  background-color: aqua;
+  background-position: top right;
+  position: absolute;
+  // bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 // .espressoContent {
