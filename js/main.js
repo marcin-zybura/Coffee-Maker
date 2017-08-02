@@ -22,7 +22,8 @@ $(function() {
   let caffeMocha = $(".caffeMocha");
   let americano = $(".americano");
   let latteMacchiato = $(".latteMacchiato");
-  let steam = $(".cup ul")
+  let steam = $(".cup ul");
+  let pointer = $(".pointer");
 
   // COLORS DECLARATION
   let coffeeColor = "#443022";
@@ -103,6 +104,20 @@ $(function() {
     });
   }
 
+  // START ROTATE POINTER
+  let startPointer= function(time) {
+    pointer.css({
+      "animation": "rotatePointer " + time + "s linear"
+    });
+  }
+
+  // STOP ROTATE POINTER
+  let stopPointer = function() {
+    pointer.css({
+      "animation": "rotatePointerBack 2s linear"
+    });
+  }
+
   // SHOW COFFEE MENU
   let showMenu = function() {
     coffeeContainer.fadeOut(500);
@@ -131,6 +146,7 @@ $(function() {
     animateDrops();
     stopPowerOn();
     stopSteam();
+    startPointer(5);
     cupContent.prepend(coffee);
     coffee.css("background-color", coffeeColor);
     cupContent.children().eq(0).animate({
@@ -138,6 +154,7 @@ $(function() {
     }, 5000, function(){
       stopDrops();
       startSteam();
+      stopPointer();
       let espressoContent = $("<p>ESPRESSO</p>");
       cupContent.children().eq(0).append(espressoContent);
     });
@@ -152,6 +169,7 @@ $(function() {
     animateDrops();
     stopPowerOn();
     stopSteam();
+    startPointer(8);
     cupContent.prepend(coffee);
     coffee.css("background-color", coffeeColor);
     cupContent.children().eq(0).animate({
@@ -169,6 +187,7 @@ $(function() {
       }, 3000, function(){
         stopDrops();
         startSteam();
+        stopPointer();
         let milkFoamContent = $("<p>MILK FOAM</p>");
         cupContent.children().eq(0).append(milkFoamContent);
       });
@@ -184,6 +203,7 @@ $(function() {
     animateDrops();
     stopPowerOn();
     stopSteam();
+    startPointer(8);
     cupContent.prepend(coffee);
     coffee.css("background-color", coffeeColor);
     cupContent.children().eq(0).animate({
@@ -201,6 +221,7 @@ $(function() {
       }, 3000, function(){
         stopDrops();
         startSteam();
+        stopPointer();
         let whippedCreamContent = $("<p>WHIPPED CREAM</p>");
         cupContent.children().eq(0).append(whippedCreamContent);
       });
@@ -217,6 +238,7 @@ $(function() {
     animateDrops();
     stopPowerOn();
     stopSteam();
+    startPointer(13);
     cupContent.prepend(coffee);
     coffee.css("background-color", coffeeColor);
     cupContent.children().eq(0).animate({
@@ -244,6 +266,7 @@ $(function() {
           }, 3000, function(){
             stopDrops();
             startSteam();
+            stopPointer();
             let milkFoamContent = $("<p>MILK FOAM</p>");
             cupContent.children().eq(0).append(milkFoamContent);
           });
@@ -260,6 +283,7 @@ $(function() {
     animateDrops();
     stopPowerOn();
     stopSteam();
+    startPointer(10);
     cupContent.prepend(coffee);
     coffee.css("background-color", coffeeColor);
     cupContent.children().eq(0).animate({
@@ -277,6 +301,7 @@ $(function() {
       }, 5000, function(){
         stopDrops();
         startSteam();
+        stopPointer();
         let steamedMilkContent = $("<p>STEAMED MILK</p>");
         cupContent.children().eq(0).append(steamedMilkContent);
       });
@@ -293,6 +318,7 @@ $(function() {
     animateDrops();
     stopPowerOn();
     stopSteam();
+    startPointer(13);
     cupContent.prepend(coffee);
     coffee.css("background-color", coffeeColor);
     cupContent.children().eq(0).animate({
@@ -321,6 +347,7 @@ $(function() {
         }, 3000, function(){
           stopDrops();
           startSteam();
+          stopPointer();
           let milkFoamContent = $("<p>MILK FOAM</p>");
           cupContent.children().eq(0).append(milkFoamContent);
         });
@@ -338,6 +365,7 @@ $(function() {
     animateDrops();
     stopPowerOn();
     stopSteam();
+    startPointer(12);
     cupContent.prepend(coffee);
     coffee.css("background-color", coffeeColor);
     cupContent.children().eq(0).animate({
@@ -365,6 +393,7 @@ $(function() {
           }, 4000, function(){
             stopDrops();
             startSteam();
+            stopPointer();
             let milkFoamContent = $("<p>MILK FOAM</p>");
             cupContent.children().eq(0).append(milkFoamContent);
           });
@@ -383,6 +412,7 @@ $(function() {
     animateDrops();
     stopPowerOn();
     stopSteam();
+    startPointer(12);
     cupContent.prepend(coffee);
     coffee.css("background-color", coffeeColor);
     cupContent.children().eq(0).animate({
@@ -421,6 +451,7 @@ $(function() {
             }, 3000, function(){
               stopDrops();
               startSteam();
+              stopPointer();
               let whippedCreamContent = $("<p>WHIPPED CREAM</p>");
               cupContent.children().eq(0).append(whippedCreamContent);
             });
@@ -438,6 +469,7 @@ $(function() {
     animateDrops();
     stopPowerOn();
     stopSteam();
+    startPointer(11);
     cupContent.prepend(coffee);
     coffee.css("background-color", coffeeColor);
     cupContent.children().eq(0).animate({
@@ -455,6 +487,7 @@ $(function() {
       }, 6000, function(){
         stopDrops();
         startSteam();
+        stopPointer();
         let hotWaterContent = $("<p>HOT WATER</p>");
         cupContent.children().eq(0).append(hotWaterContent);
       });
@@ -470,6 +503,7 @@ $(function() {
     animateDrops();
     stopPowerOn();
     stopSteam();
+    startPointer(10);
     cupContent.prepend(steamedMilk);
     steamedMilk.css({
       "bottom": "0",
@@ -488,6 +522,7 @@ $(function() {
       }, 5000, function(){
         stopDrops();
         startSteam();
+        stopPointer();
         let espressoContent = $("<p>ESPRESSO</p>");
         cupContent.children().eq(0).append(espressoContent);
       });

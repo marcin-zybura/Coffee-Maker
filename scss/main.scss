@@ -217,6 +217,24 @@ body {
   border-radius: 0 0 $width $width;
 }
 
+@keyframes rotatePointer {
+  0% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes rotatePointerBack {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
 .pointer {
   display: block;
   width: 0.25rem;
@@ -230,6 +248,7 @@ body {
   transform: rotate(-90deg);
   transform-origin: center bottom;
   transition: transform $speed ease;
+  // animation: rotatePointer 5s linear;
 }
 
 .pointer-knob {
