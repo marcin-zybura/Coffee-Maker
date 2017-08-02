@@ -131,19 +131,6 @@ body {
   }
 }
 
-// @keyframes animateArrow {
-//   0% {opacity: 1;}
-//   100% {opacity: 0.3;}
-// }
-//
-// .arrowHint {
-//   display: none;
-//   position: relative;
-//   // top: 40%;
-//   // left: 60%;
-//   // transform: scale(0.7);
-// }
-
 .coffeeContainer {
   display: none;
   position: absolute;
@@ -165,8 +152,8 @@ body {
 }
 
 @keyframes animateSwitch {
-  0% {opacity: 1;}
-  100% {opacity: 0.3;}
+  0% {opacity: 1; transform: scale(1.2)}
+  100% {opacity: 0.3; transform: scale(1.0)}
 }
 
 .switch {
@@ -174,6 +161,10 @@ body {
   width: 3rem;
   background-color: #cc0000;
   border-radius: 50%;
+  &:hover {
+    transform: scale(1.2);
+    transition: all 0.2s linear;
+  }
 }
 
 .gauge-cont {
@@ -321,10 +312,9 @@ body {
 
 .coffeeDrops {
   position: absolute;
-  top: 4.5rem;
   z-index: 1;
   // opacity: 0;
-  top: 13%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, 0);
   .drop {
@@ -339,8 +329,8 @@ body {
 }
 
 .cup {
-  height: 17rem;
-  width: 15rem;
+  height: 15rem;
+  width: 18rem;
   border: 0.8rem solid black;
   border-bottom: 2.2rem solid black;
   border-radius: 0.8rem 0.8rem 2.5rem 2.5rem;
@@ -366,6 +356,66 @@ body {
   font-size: 1.5rem;
 }
 
+.coffee {
+  width: 100%;
+  background-color: brown;
+  background-position: top right;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.milkFoam {
+  width: 100%;
+  background-color: green;
+  background-position: top right;
+  position: absolute;
+  // bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.whippedCream {
+  width: 100%;
+  background-color: blue;
+  background-position: top right;
+  position: absolute;
+  // bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.steamedMilk {
+  width: 100%;
+  background-color: red;
+  background-position: top right;
+  position: absolute;
+  // bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.chocolateSyrup {
+
+}
+
 // .espressoContent {
 //   color: #FFF;
 //   font-weight: bold;
@@ -375,12 +425,12 @@ body {
 .cupHandle {
   display:block;
   width: 3rem;
-  height: 11rem;
-  border-top: 1rem solid black;
+  height: 5rem;
+  border-top: 2rem solid black;
   border-right: 1.2rem solid black;
   border-bottom: 1rem solid black;
   border-radius: 0 4rem 4rem 0;
-  transform: translate(15.5rem, 2rem);
+  transform: translate(18.5rem, 1.5rem);
 }
 
 .base {
