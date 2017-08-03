@@ -1,0 +1,54 @@
+@keyframes showDialogBox {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes animateSwitch {
+  0% {opacity: 1; transform: scale(1.2)}
+  100% {opacity: 0.3; transform: scale(1.0)}
+}
+
+@keyframes rotatePointer {
+  0% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes rotatePointerBack {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes animateDrops {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes animateSteam {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0.3rem);
+  }
+  100% {
+    transform: translateY(-8rem);
+    opacity: 0;
+    filter: blur(0.5rem);
+  }
+}
+
+@keyframes animateMenuTitle {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}

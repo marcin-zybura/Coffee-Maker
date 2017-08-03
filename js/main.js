@@ -24,6 +24,8 @@ $(function() {
   let latteMacchiato = $(".latteMacchiato");
   let steam = $(".cup ul");
   let pointer = $(".pointer");
+  let menuTitle = $(".menuTitle");
+  let innerContainer = $(".innerContainer");
 
   // COLORS DECLARATION
   let coffeeColor = "#443022";
@@ -118,10 +120,18 @@ $(function() {
     });
   }
 
+  // START ANIMATE MENU TITLE
+  let animateMenuTitle = function() {
+    menuTitle.css({
+      "animation": "animateMenuTitle 1.5s infinite linear"
+    });
+  }
+
   // SHOW COFFEE MENU
   let showMenu = function() {
     coffeeContainer.fadeOut(500);
     menu.fadeIn(500);
+    animateMenuTitle();
   }
 
   // TOGGLE BEETWEN COFFEE MENU AND COFFEE MAKER
@@ -129,6 +139,15 @@ $(function() {
     coffeeContainer.fadeToggle(200);
     menu.fadeToggle(200);
   }
+
+  // // CLOSE COFFEE MENU IF ITS DISPLAY IS BLOCK
+  // let closeMenu = function() {
+  //   if (menu.style.display === "block") {
+  //     innerContainer.on("click", function(){
+  //       menu.fadeOut(500);
+  //     });
+  //   }
+  // }
 
   // CLEAR CONTENT OF CUP
   let clearContent = function() {
@@ -155,6 +174,7 @@ $(function() {
       stopDrops();
       startSteam();
       stopPointer();
+      animatePowerOn();
       let espressoContent = $("<p>ESPRESSO</p>");
       cupContent.children().eq(0).append(espressoContent);
     });
@@ -188,6 +208,7 @@ $(function() {
         stopDrops();
         startSteam();
         stopPointer();
+        animatePowerOn();
         let milkFoamContent = $("<p>MILK FOAM</p>");
         cupContent.children().eq(0).append(milkFoamContent);
       });
@@ -222,6 +243,7 @@ $(function() {
         stopDrops();
         startSteam();
         stopPointer();
+        animatePowerOn();
         let whippedCreamContent = $("<p>WHIPPED CREAM</p>");
         cupContent.children().eq(0).append(whippedCreamContent);
       });
@@ -267,6 +289,7 @@ $(function() {
             stopDrops();
             startSteam();
             stopPointer();
+            animatePowerOn();
             let milkFoamContent = $("<p>MILK FOAM</p>");
             cupContent.children().eq(0).append(milkFoamContent);
           });
@@ -302,6 +325,7 @@ $(function() {
         stopDrops();
         startSteam();
         stopPointer();
+        animatePowerOn();
         let steamedMilkContent = $("<p>STEAMED MILK</p>");
         cupContent.children().eq(0).append(steamedMilkContent);
       });
@@ -348,6 +372,7 @@ $(function() {
           stopDrops();
           startSteam();
           stopPointer();
+          animatePowerOn();
           let milkFoamContent = $("<p>MILK FOAM</p>");
           cupContent.children().eq(0).append(milkFoamContent);
         });
@@ -394,6 +419,7 @@ $(function() {
             stopDrops();
             startSteam();
             stopPointer();
+            animatePowerOn();
             let milkFoamContent = $("<p>MILK FOAM</p>");
             cupContent.children().eq(0).append(milkFoamContent);
           });
@@ -488,6 +514,7 @@ $(function() {
         stopDrops();
         startSteam();
         stopPointer();
+        animatePowerOn();
         let hotWaterContent = $("<p>HOT WATER</p>");
         cupContent.children().eq(0).append(hotWaterContent);
       });
@@ -523,6 +550,7 @@ $(function() {
         stopDrops();
         startSteam();
         stopPointer();
+        animatePowerOn();
         let espressoContent = $("<p>ESPRESSO</p>");
         cupContent.children().eq(0).append(espressoContent);
       });
@@ -546,6 +574,7 @@ $(function() {
   });
   powerOn.on("click", showMenu);
 
+
   // MENU ON CLICK FUNCTIONS
   espresso.on("click", fillEspresso);
   espressoMacchiato.on("click",fillEspressoMacchiato);
@@ -560,5 +589,8 @@ $(function() {
 });
 
 /*
-Nadać kolory odpowiednim wypełnieniom poprzez dodanie ich css()
+RZECZY DO ZAPYTANIA
+1. JAK ZROBIĆ, ŻEBY MENU ZNIKAŁO PO KLIKNIĘCIU POZA NIM
+2. DLACZEGO NA MOZILLI JEST BIAŁA KRESKA MIĘDZY SPODEM KUBKA A ZAWARTOŚCIĄ
+  TO SAMO NA UCHU KUBKA
 */

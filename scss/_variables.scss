@@ -1,0 +1,21 @@
+$background: #D0885D;
+$primary: #70b37d;
+$alternate: #e14e54;
+$width: 9rem;
+$height: 5rem;
+$gaugewidth: 2rem;
+$black: #000;
+$white: #fff;
+$speed: 800ms;
+@mixin contents {
+  width: 100%;
+  background-position: top right;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
