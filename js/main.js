@@ -44,7 +44,7 @@ $(function() {
       opacity: 0,
       display: "none"
     }, 500, () => {
-      $(this).remove();
+      dialogBox.remove();
       coffeeContainer.fadeIn(500).css("display", "inline-block");
       hintBox.fadeIn(500).css("display", "inline-block");
     });
