@@ -4,15 +4,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 12vw;
+  transform: scale(2);
+  @include smartphonesLandscape {
+    transform: scale(1);
+    top: 2vw;
+  }
 }
 
 .header {
   width: 30vw;
   height: 6vw;
-  position: absolute;
-  top: 2vw;
-  left: 50vw;
-  transform: translate(-50%, 0);
   font-size: 4vw;
   font-family: 'Lobster', cursive;
   background-color: #FF6633;
@@ -23,8 +26,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  @include smartphones {
-    width: 30vh;
-    height: 8vh;
-  }
+
 }

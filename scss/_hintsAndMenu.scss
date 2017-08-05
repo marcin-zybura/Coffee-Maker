@@ -14,7 +14,8 @@
   animation-duration: 1s;
   display: inline-block;
   position: relative;
-  @include smartphones {
+  transform: scale(1.4);
+  @include smartphonesLandscape {
     transform: scale(1);
   }
   span.title {
@@ -66,7 +67,8 @@
   text-align: center;
   display: none;
   z-index: 1;
-  @include smartphones {
+  transform: scale(1.4);
+  @include smartphonesLandscape {
     transform: scale(1);
   }
   span.spanOK {
@@ -108,11 +110,9 @@
   height: auto;
   display: none;
   margin-top: 2vw;
-  @include smartphones {
-    transform: scale(2.2);
-  }
+  transform: scale(2.4);  
   @include smartphonesLandscape {
-    transform: scale(1.2);
+    transform: scale(1);
   }
   ul {
     width: 35vw;
