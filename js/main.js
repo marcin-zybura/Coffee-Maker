@@ -438,7 +438,7 @@ $(function() {
     animateDrops();
     stopPowerOn();
     stopSteam();
-    startPointer(12);
+    startPointer(15);
     cupContent.prepend(coffee);
     coffee.css("background-color", coffeeColor);
     cupContent.children().eq(0).animate({
