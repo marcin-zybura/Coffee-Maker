@@ -1,9 +1,17 @@
+@import "mixins.scss";
+
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .header {
   width: 30vw;
   height: 6vw;
   position: absolute;
-  top: 2%;
-  left: 50%;
+  top: 2vw;
+  left: 50vw;
   transform: translate(-50%, 0);
   font-size: 4vw;
   font-family: 'Lobster', cursive;
@@ -15,4 +23,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @include smartphones {
+    width: 30vh;
+    height: 8vh;
+  }
 }

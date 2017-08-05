@@ -478,6 +478,7 @@ $(function() {
               stopDrops();
               startSteam();
               stopPointer();
+              stopPowerOn();
               let whippedCreamContent = $("<p>WHIPPED CREAM</p>");
               cupContent.children().eq(0).append(whippedCreamContent);
             });

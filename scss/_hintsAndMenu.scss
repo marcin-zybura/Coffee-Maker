@@ -1,10 +1,12 @@
+@import "mixins.scss";
+
 .dialogBox {
   width: 60vw;
   height: 20vw;
   background: rgba(255, 102, 51, 0.5);
   font-size: 3vw;
   border: 0.3vw solid #000;
-  border-radius: 2rem;
+  border-radius: 1vw;
   box-shadow: 0vw 0vw 1.8vw 0.8vw rgba(0,0,0,0.75);
   padding: 1.5vw;
   text-align: center;
@@ -12,6 +14,9 @@
   animation-duration: 1s;
   display: inline-block;
   position: relative;
+  @include smartphones {
+    transform: scale(1);
+  }
   span.title {
     font-weight: bold;
     font-family: 'Lobster', cursive;
@@ -61,6 +66,9 @@
   text-align: center;
   display: none;
   z-index: 1;
+  @include smartphones {
+    transform: scale(1);
+  }
   span.spanOK {
     font-weight: bold;
   }
@@ -96,9 +104,22 @@
 }
 
 .menu {
-  width: 35vw;
+  // width: 35vw;
+  height: auto;
   display: none;
   margin-top: 2vw;
+  @include smartphones {
+    transform: scale(2.2);
+  }
+  @include smartphonesLandscape {
+    transform: scale(1.2);
+  }
+  // @include smartphonesPortrait {
+  //   transform: scale(2.2);
+  // }
+  // @include smartphonesLandscape {
+  //   transform: scale(1);
+  // }
   ul {
     width: 35vw;
     display: inline-block;

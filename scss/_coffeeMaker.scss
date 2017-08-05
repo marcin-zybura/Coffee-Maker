@@ -1,14 +1,16 @@
+@import "mixins.scss";
+
 .coffeeContainer {
   width: 40rem;
   height: auto;
   display: none;
   position: absolute;
-  top: 15%;
-  transform: scale(0.8);
+  // top: 10vw;
+  transform: scale(1.8);
   opacity: 0.1;
-  // @include test {
-  //   transform: scale(0.2);
-  // };
+  @include smartphonesLandscape {
+    transform: scale(0.7);
+  }
 }
 
 .panel {

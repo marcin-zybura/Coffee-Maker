@@ -1,0 +1,34 @@
+/* Smartphones (portrait and landscape) ----------- */
+@mixin smartphones {
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    @content;
+  }
+}
+
+/* Smartphones (landscape) ----------- */
+@mixin smartphonesLandscape {
+  @media only screen and (min-device-width : 320px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+/* Smartphones (portrait) ----------- */
+@mixin smartphonesPortrait {
+  @media only screen and (max-device-width : 321px) {
+    @content;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@mixin desktopsAndLaptops {
+  @media only screen  and (min-width : 1224px) {
+    @content;
+  }
+}
+
+/* Large screens ----------- */
+@mixin largeScreens {
+  @media only screen  and (min-width : 1824px) {
+    @content;
+  }
+}
