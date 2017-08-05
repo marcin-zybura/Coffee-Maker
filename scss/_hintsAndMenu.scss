@@ -14,8 +14,16 @@
   animation-duration: 1s;
   display: inline-block;
   position: relative;
-  transform: scale(1.4);
+  @include smartphonesPortrait {
+    transform: scale(1.4);
+  }
   @include smartphonesLandscape {
+    transform: scale(1);
+  }
+  @include tabletsPoirtrait {
+    transform: scale(1.4);
+  }
+  @include tabletsLandscape {
     transform: scale(1);
   }
   span.title {
@@ -67,8 +75,16 @@
   text-align: center;
   display: none;
   z-index: 1;
-  transform: scale(1.4);
+  @include smartphonesPortrait {
+    transform: scale(1.4);
+  }
   @include smartphonesLandscape {
+    transform: scale(1);
+  }
+  @include tabletsPoirtrait {
+    transform: scale(1.4);
+  }
+  @include tabletsLandscape {
     transform: scale(1);
   }
   span.spanOK {
@@ -110,8 +126,19 @@
   height: auto;
   display: none;
   margin-top: 2vw;
-  transform: scale(2.4);  
+  @include smartphonesPortrait {
+    transform: scale(2.4);
+  }
   @include smartphonesLandscape {
+    transform: scale(1);
+  }
+  @include tabletsPoirtrait {
+    transform: scale(2.4);
+  }
+  @include tabletsLandscape {
+    transform: scale(1);
+  }
+  @include desktops {
     transform: scale(1);
   }
   ul {

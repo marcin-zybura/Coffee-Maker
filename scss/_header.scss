@@ -5,9 +5,21 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 12vw;
-  transform: scale(2);
+  transform: scale(1);
+  top: 2vw;
+  @include smartphonesPortrait {
+    transform: scale(2);
+    top: 12vw;
+  }
   @include smartphonesLandscape {
+    transform: scale(1);
+    top: 2vw;
+  }
+  @include tabletsPoirtrait {
+    transform: scale(2);
+    top: 12vw;
+  }
+  @include tabletsLandscape {
     transform: scale(1);
     top: 2vw;
   }

@@ -1,5 +1,5 @@
-/* Smartphones (portrait and landscape) ----------- */
-@mixin smartphones {
+/* Smartphones (portrait) ----------- */
+@mixin smartphonesPortrait {
   @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     @content;
   }
@@ -7,28 +7,28 @@
 
 /* Smartphones (landscape) ----------- */
 @mixin smartphonesLandscape {
-  @media only screen and (min-device-width : 320px) and (orientation: landscape) {
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation: landscape) {
     @content;
   }
 }
 
-/* Smartphones (portrait) ----------- */
-@mixin smartphonesPortrait {
-  @media only screen and (max-device-width : 321px) {
+/* Tablets/large smartphones (portrait) ----------- */
+@mixin tabletsPoirtrait {
+  @media only screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation: portrait) {
     @content;
   }
 }
 
-/* Desktops and laptops ----------- */
-@mixin desktopsAndLaptops {
-  @media only screen  and (min-width : 1224px) {
+/* Tablets/large smartphones (landscape) ----------- */
+@mixin tabletsLandscape {
+  @media only screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation: landscape) {
     @content;
   }
 }
 
-/* Large screens ----------- */
-@mixin largeScreens {
-  @media only screen  and (min-width : 1824px) {
+/* Desktops ----------- */
+@mixin desktops {
+  @media only screen and (min-device-width : 1025px) {
     @content;
   }
 }
