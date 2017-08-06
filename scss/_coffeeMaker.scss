@@ -18,7 +18,8 @@
     transform: scale(1.8);
   }
   @include tabletsLandscape {
-    transform: scale(0.7);
+    transform: scale(0.6);
+    top: 0.5vw;
   }
   @include desktops {
     transform: scale(0.8);

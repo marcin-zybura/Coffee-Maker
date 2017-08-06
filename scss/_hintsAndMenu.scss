@@ -141,6 +141,21 @@
   @include desktops {
     transform: scale(1);
   }
+  .menuTitleContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menuTitle {
+    font-size: 2vw;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+  }
+  .closeMenuCross {
+    position: absolute;
+    right: 0;
+    font-size: 2vw;
+  }
   ul {
     width: 35vw;
     display: inline-block;
@@ -162,10 +177,5 @@
   a {
     text-decoration: none;
     color: black;
-  }
-  .menuTitle {
-    font-size: 2vw;
-    font-family: 'Lobster', cursive;
-    text-align: center;
   }
 }

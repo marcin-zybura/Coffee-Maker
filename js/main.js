@@ -1,6 +1,7 @@
 $(function() {
 
   // <<< SECTION OF VARIABLES DECLARATION >>>
+  let html = $("html");
   let cup = $(".cup");
   let cupContent = $(".cupContent");
   let cupContentP = $(".cupContent p");
@@ -26,6 +27,7 @@ $(function() {
   let pointer = $(".pointer");
   let menuTitle = $(".menuTitle");
   let innerContainer = $(".innerContainer");
+  let closeMenuCross = $(".closeMenuCross");
 
   // COLORS DECLARATION
   let coffeeColor = "#443022";
@@ -34,6 +36,7 @@ $(function() {
   let whippedCreamColor = "#88c3c3";
   let chocolateSyrupColor = "#A08244";
   let hotWaterColor = "#7DC3B4";
+  // <<< END COLORS DECLARATION >>>
   // <<< END SECTION OF VARIABLES DECLARATION >>>
 
 
@@ -120,7 +123,7 @@ $(function() {
     });
   }
 
-  // START ANIMATE MENU TITLE
+  // ANIMATE COFFEE MENU TITLE
   let animateMenuTitle = () => {
     menuTitle.css({
       "animation": "animateMenuTitle 1.5s infinite linear"
@@ -134,20 +137,17 @@ $(function() {
     animateMenuTitle();
   }
 
-  // TOGGLE BEETWEN COFFEE MENU AND COFFEE MAKER
+  // SWITCH FROM COFFEE MENU TO COFFEE MAKER
   let toggleBeetwenMenu = () => {
-    coffeeContainer.fadeToggle(200);
-    menu.fadeToggle(200);
+    coffeeContainer.toggle(200);
+    menu.toggle(200);
   }
 
-  // // CLOSE COFFEE MENU IF ITS DISPLAY IS BLOCK
-  // let closeMenu = function() {
-  //   if (menu.style.display === "block") {
-  //     innerContainer.on("click", function(){
-  //       menu.fadeOut(500);
-  //     });
-  //   }
-  // }
+  // CLOSE COFFEE MENU ON CLICK ON CROSS
+  let closeMenu = () => {
+    menu.toggle(500);
+    coffeeContainer.toggle(500);
+  }
 
   // CLEAR CONTENT OF CUP
   let clearContent = () => {
@@ -157,6 +157,7 @@ $(function() {
     }, 200);
   }
 
+  // <<< SECTION OF COFFEE FILLING FUNCTIONS >>>
   // START FILLING ESPRESSO INTO CUP
   let fillEspresso = () => {
     let coffee = $("<div class='coffee'></div>");
@@ -557,9 +558,10 @@ $(function() {
       });
     });
   }
+  // <<< END SECTION OF COFFEE FILLING FUNCTIONS >>>
   // <<< END SECTION OF FUNCTIONS DECLARATION >>>
 
-
+  // DIALOG BOX AND HINT BOX FUNCTIONS
   btnNext.on("click", showCoffeMaker);
   btnOK.on("click", () => {
     hintBox.animate({
@@ -574,9 +576,10 @@ $(function() {
     }, 1000);
   });
   powerOn.on("click", showMenu);
+  closeMenuCross.on("click", closeMenu);
 
 
-  // MENU ON CLICK FUNCTIONS
+  // COFFEE MENU ON CLICK FUNCTIONS
   espresso.on("click", fillEspresso);
   espressoMacchiato.on("click",fillEspressoMacchiato);
   espressoConPanna.on("click",fillEspressoConPanna);
@@ -588,6 +591,10 @@ $(function() {
   americano.on("click", fillAmericano);
   latteMacchiato.on("click", fillLatteMacchiato);
 });
+
+
+
+
 
 /*
 RZECZY DO ZAPYTANIA
