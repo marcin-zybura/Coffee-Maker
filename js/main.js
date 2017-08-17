@@ -30,12 +30,12 @@ $(function() {
   let steam = $(".cup ul");
 
   // <<< COLORS DECLARATION >>>
-  let chocolateSyrupColor = "#A08244";
-  let coffeeColor = "#443022";
-  let hotWaterColor = "#7DC3B4";
-  let milkFoamColor = "#99BE74";
-  let steamedMilkColor = "#A0AC6C";
-  let whippedCreamColor = "#88C3C3";
+  let chocolateSyrupColor = "#6B572E";
+  let coffeeColor = "#28170D";
+  let hotWaterColor = "#96CFC3";
+  let milkFoamColor = "#DBC5B6";
+  let steamedMilkColor = "#EAE1D2";
+  let whippedCreamColor = "#DDC8BB";
   // <<< END COLORS DECLARATION >>>
   // <<< END SECTION OF VARIABLES DECLARATION >>>
 

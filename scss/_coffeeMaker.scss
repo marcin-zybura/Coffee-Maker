@@ -8,7 +8,7 @@
   position: absolute;
   transform: scale(1.8);
   width: 40rem;
-  
+
   @include smartphonesPortrait {
     transform: scale(1.8);
   }
@@ -137,7 +137,7 @@
   border-bottom: 0 transparent;
   border-left: 2rem solid transparent;
   border-right: 2rem solid transparent;
-  border-top: 35rem solid #75a3a3;
+  border-top: 35rem solid #527a7a;
   height: 0;
   left: 50%;
   position: relative;
@@ -179,7 +179,7 @@
   z-index: 1;
 
   .drop {
-    background-color: #35261b;
+    background-color: #28170D;
     border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
     height: 1.5rem;
     margin: 1rem 0;
@@ -257,14 +257,17 @@
 
 .milkFoam {
   @include content;
+  color: #000;
 }
 
 .whippedCream {
   @include content;
+  color: #000;
 }
 
 .steamedMilk {
   @include content;
+  color: #000;
 }
 
 .chocolateSyrup {
@@ -273,6 +276,7 @@
 
 .hotWater {
   @include content;
+  color: #000;
 }
 
 .cupHandle {
