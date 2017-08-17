@@ -1,41 +1,41 @@
 $(function() {
 
   // <<< SECTION OF VARIABLES DECLARATION >>>
-  let html = $("html");
+  let americano = $(".americano");
+  let btnNext = $(".btnNext span");
+  let btnOK = $(".btnOK");
+  let caffeBreve = $(".caffeBreve");
+  let caffeLatte = $(".caffeLatte");
+  let caffeMocha = $(".caffeMocha");
+  let cappuccino = $(".cappuccino");
+  let closeMenuCross = $(".closeMenuCross");
+  let coffeeContainer = $(".coffeeContainer");
   let cup = $(".cup");
   let cupContent = $(".cupContent");
   let cupContentP = $(".cupContent p");
-  let powerOn = $(".switch");
-  let drops = $(".coffeeDrops");
-  let btnNext = $(".btnNext span");
-  let coffeeContainer = $(".coffeeContainer");
   let dialogBox = $(".dialogBox");
-  let hintBox = $(".hintBox");
-  let btnOK = $(".btnOK");
-  let menu = $(".menu");
+  let drops = $(".coffeeDrops");
   let espresso = $(".espresso");
-  let espressoMacchiato = $(".espressoMacchiato");
   let espressoConPanna = $(".espressoConPanna");
-  let caffeLatte = $(".caffeLatte");
+  let espressoMacchiato = $(".espressoMacchiato");
   let flatWhite = $(".flatWhite");
-  let caffeBreve = $(".caffeBreve");
-  let cappuccino = $(".cappuccino");
-  let caffeMocha = $(".caffeMocha");
-  let americano = $(".americano");
-  let latteMacchiato = $(".latteMacchiato");
-  let steam = $(".cup ul");
-  let pointer = $(".pointer");
-  let menuTitle = $(".menuTitle");
+  let hintBox = $(".hintBox");
+  let html = $("html");
   let innerContainer = $(".innerContainer");
-  let closeMenuCross = $(".closeMenuCross");
+  let latteMacchiato = $(".latteMacchiato");
+  let menu = $(".menu");
+  let menuTitle = $(".menuTitle");
+  let pointer = $(".pointer");
+  let powerOn = $(".switch");
+  let steam = $(".cup ul");
 
-  // COLORS DECLARATION
-  let coffeeColor = "#443022";
-  let steamedMilkColor = "#a0ac6c";
-  let milkFoamColor = "#99be74";
-  let whippedCreamColor = "#88c3c3";
+  // <<< COLORS DECLARATION >>>
   let chocolateSyrupColor = "#A08244";
+  let coffeeColor = "#443022";
   let hotWaterColor = "#7DC3B4";
+  let milkFoamColor = "#99BE74";
+  let steamedMilkColor = "#A0AC6C";
+  let whippedCreamColor = "#88C3C3";
   // <<< END COLORS DECLARATION >>>
   // <<< END SECTION OF VARIABLES DECLARATION >>>
 
@@ -158,7 +158,7 @@ $(function() {
   }
 
   // <<< SECTION OF COFFEE FILLING FUNCTIONS >>>
-  // START FILLING ESPRESSO INTO CUP
+  // FILLING ESPRESSO INTO CUP
   let fillEspresso = () => {
     let coffee = $("<div class='coffee'></div>");
     clearContent();
@@ -180,8 +180,9 @@ $(function() {
       cupContent.children().eq(0).append(espressoContent);
     });
   }
+  // END FILLING ESPRESSO INTO CUP
 
-  // START FILLING ESPRESSO MACCHIATO INTO CUP
+  // FILLING ESPRESSO MACCHIATO INTO CUP
   let fillEspressoMacchiato = () => {
     let coffee = $("<div class='coffee'></div>");
     let milkFoam = $("<div class='milkFoam'></div>");
@@ -215,8 +216,9 @@ $(function() {
       });
     });
   }
+  // END FILLING ESPRESSO MACCHIATO INTO CUP
 
-  // START FILLING ESPRESSO CON PANNA INTO CUP
+  // FILLING ESPRESSO CON PANNA INTO CUP
   let fillEspressoConPanna = () => {
     let coffee = $("<div class='coffee'></div>");
     let whippedCream = $("<div class='whippedCream'></div>");
@@ -250,8 +252,9 @@ $(function() {
       });
     });
   }
+  // END FILLING ESPRESSO CON PANNA INTO CUP
 
-  // START FILLING CAFFE LATTE INTO CUP
+  // FILLING CAFFE LATTE INTO CUP
   let fillCaffeLatte = () => {
     let coffee = $("<div class='coffee'></div>");
     let steamedMilk = $("<div class='steamedMilk'></div>");
@@ -297,8 +300,9 @@ $(function() {
       });
     });
   }
+  // END FILLING CAFFE LATTE INTO CUP
 
-  // START FILLING FLAT WHITE INTO CUP
+  // FILLING FLAT WHITE INTO CUP
   let fillFlatWhite = () => {
     let coffee = $("<div class='coffee'></div>");
     let steamedMilk = $("<div class='steamedMilk'></div>");
@@ -332,8 +336,9 @@ $(function() {
       });
     });
   }
+  // END FILLING FLAT WHITE INTO CUP
 
-  // START FILLING CAFFE BREVE INTO CUP
+  // FILLING CAFFE BREVE INTO CUP
   let fillCaffeBreve = () => {
     let coffee = $("<div class='coffee'></div>");
     let steamedMilk = $("<div class='steamedMilk'></div>");
@@ -380,8 +385,9 @@ $(function() {
       });
     });
   }
+  // END FILLING CAFFE BREVE INTO CUP
 
-  // START FILLING CAPPUCCINO INTO CUP
+  // FILLING CAPPUCCINO INTO CUP
   let fillCappuccino = () => {
     let coffee = $("<div class='coffee'></div>");
     let steamedMilk = $("<div class='steamedMilk'></div>");
@@ -427,8 +433,9 @@ $(function() {
       });
     });
   }
+  // END FILLING CAPPUCCINO INTO CUP
 
-  // START FILLING CAFFE MOCHA INTO CUP
+  // FILLING CAFFE MOCHA INTO CUP
   let fillCaffeMocha = () => {
     let coffee = $("<div class='coffee'></div>");
     let chocolateSyrup = $("<div class='chocolateSyrup'></div>")
@@ -487,8 +494,9 @@ $(function() {
       });
     });
   }
+  // END FILLING CAFFE MOCHA INTO CUP
 
-  // START FILLING AMERICANO INTO CUP
+  // FILLING AMERICANO INTO CUP
   let fillAmericano = () => {
     let coffee = $("<div class='coffee'></div>");
     let hotWater = $("<div class='hotWater'></div>");
@@ -522,8 +530,9 @@ $(function() {
       });
     });
   }
+  // END FILLING AMERICANO INTO CUP
 
-  // START FILLING LATTE MACCHIATO INTO CUP
+  // FILLING LATTE MACCHIATO INTO CUP
   let fillLatteMacchiato = () => {
     let coffee = $("<div class='coffee'></div>");
     let steamedMilk = $("<div class='steamedMilk'></div>");
@@ -558,10 +567,12 @@ $(function() {
       });
     });
   }
+  // END FILLING LATTE MACCHIATO INTO CUP
+
   // <<< END SECTION OF COFFEE FILLING FUNCTIONS >>>
   // <<< END SECTION OF FUNCTIONS DECLARATION >>>
 
-  // DIALOG BOX AND HINT BOX FUNCTIONS
+  // <<< DIALOG BOX AND HINT BOX FUNCTIONS >>>
   btnNext.on("click", showCoffeMaker);
   btnOK.on("click", () => {
     hintBox.animate({
@@ -577,6 +588,7 @@ $(function() {
   });
   powerOn.on("click", showMenu);
   closeMenuCross.on("click", closeMenu);
+  // <<< END DIALOG BOX AND HINT BOX FUNCTIONS >>>
 
 
   // COFFEE MENU ON CLICK FUNCTIONS
