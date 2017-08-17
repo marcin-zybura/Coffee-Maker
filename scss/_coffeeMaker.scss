@@ -1,13 +1,14 @@
 @import "mixins.scss";
+@import "variables.scss";
 
 .coffeeContainer {
-  width: 40rem;
-  height: auto;
   display: none;
-  position: absolute;
-  // top: 10vw;
-  transform: scale(1.8);
+  height: auto;
   opacity: 0.1;
+  position: absolute;
+  transform: scale(1.8);
+  width: 40rem;
+  
   @include smartphonesPortrait {
     transform: scale(1.8);
   }
@@ -27,174 +28,178 @@
 }
 
 .panel {
-  height: 10rem;
-  width: 40rem;
+  align-items: center;
   background-color: #ff4000;
   border-radius: 3rem 3rem 1rem 1rem;
-  position: relative;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  height: 10rem;
+  position: relative;
+  width: 40rem;
 
 }
 
 .switch {
-  height: 3rem;
-  width: 3rem;
   background-color: #cc0000;
   border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
   &:hover {
     transform: scale(1.2);
     transition: all 0.2s linear;
   }
 }
 
+// <<< GAUGE STYLES >>>
 .gauge-cont {
   display: inline-block;
+  height: $height;
   position: relative;
   width: $width;
-  height: $height;
   &:first-child {
     margin: 0;
   }
 }
 
 .gauge {
-  width: $width;
   height: $height;
-  position: relative;
   overflow: hidden;
+  position: relative;
+  width: $width;
 }
 
 .inner {
-  width: $width;
-  height: $height;
-  display: block;
   background-color: lighten($background, 10%);
   border-radius: $width $width 0 0;
+  display: block;
+  height: $height;
+  width: $width;
   z-index:1;
   &:after {
-    content: '';
-    width: $width - ($gaugewidth * 2);
-    height: $height - $gaugewidth;
-    top: $gaugewidth;
-    left: $gaugewidth;
     background-color: $background;
     border-radius: $width $width 0 0;
+    content: '';
+    height: $height - $gaugewidth;
+    left: $gaugewidth;
     position: absolute;
+    top: $gaugewidth;
+    width: $width - ($gaugewidth * 2);
     z-index: 3;
   }
 }
 
 .spinner {
-  width: $width;
-  height: $height;
   background-color: $primary;
-  position: absolute;
-  z-index: 2;
-  transform-origin: top center;
-  transform: rotate(0deg);
-  transition: transform $speed ease;
-  transform: translateZ(0);
   border-radius: 0 0 $width $width;
+  height: $height;
+  position: absolute;
+  transform: rotate(0deg);
+  transform: translateZ(0);
+  transform-origin: top center;
+  transition: transform $speed ease;
+  width: $width;
+  z-index: 2;
 }
 
 .pointer {
-  display: block;
-  width: 0.25rem;
-  height: $height - 1;
   background-color: $white;
   border-radius: 0.3rem 0.3rem 0 0;
-  position: absolute;
-  z-index: 4;
   bottom: 0.1rem;
+  display: block;
+  height: $height - 1;
   left: ($width / 2);
+  position: absolute;
   transform: rotate(-90deg);
   transform-origin: center bottom;
   transition: transform $speed ease;
+  width: 0.25rem;
+  z-index: 4;
 }
 
 .pointer-knob {
-  width: 1rem;
-  height: 1rem;
   background-color: $white;
-  position: absolute;
-  left: 4rem;
-  bottom: -0.4rem;
-  z-index: 5;
   border-radius: 20px;
+  bottom: -0.4rem;
+  height: 1rem;
+  left: 4rem;
+  position: absolute;
+  width: 1rem;
+  z-index: 5;
 }
+// <<< END GAUGE STYLES >>>
 
 .trapezoidContainer {
-  position: relative;
   height: 35rem;
+  position: relative;
 }
 
 .trapezoid {
-    position: relative;
-    height: 0;
-    width: 33rem;
-    border-top: 35rem solid #75a3a3;
-    border-left: 2rem solid transparent;
-    border-right: 2rem solid transparent;
-    border-bottom: 0 transparent;
-    left: 50%;
-    transform: translate(-50%, 0);
+  border-bottom: 0 transparent;
+  border-left: 2rem solid transparent;
+  border-right: 2rem solid transparent;
+  border-top: 35rem solid #75a3a3;
+  height: 0;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, 0);
+  width: 33rem;
 }
 
 .groupHandleStick {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 1.5rem;
-  left: 7.5rem;
   background-color: #4f2902;
   border-radius: 1rem 0 0 1rem;
+  content: "";
+  display: block;
   height: 1.5rem;
+  left: 7.5rem;
+  position: absolute;
+  top: 1.5rem;
   width: 10rem;
   z-index: 1;
 }
 
 .groupHandle {
-  height: 0;
-  width: 6rem;
-  z-index: 1;
-  position: absolute;
-  border-top: 4.5rem solid #DBE8E7;
+  border-bottom: 0 transparent;
   border-left: 2rem solid transparent;
   border-right: 2rem solid transparent;
-  border-bottom: 0 transparent;
+  border-top: 4.5rem solid #DBE8E7;
+  height: 0;
   left: 50%;
+  position: absolute;
   transform: translate(-50%, 0);
+  width: 6rem;
+  z-index: 1;
 }
 
 .coffeeDrops {
-  position: absolute;
-  z-index: 1;
-  top: 15%;
   left: 50%;
+  position: absolute;
+  top: 15%;
   transform: translate(-50%, 0);
+  z-index: 1;
+
   .drop {
-    height: 1.5rem;
-    width: 1.5rem;
     background-color: #35261b;
-    margin: 1rem 0;
     border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
-    transform: rotateZ(-45deg);
+    height: 1.5rem;
+    margin: 1rem 0;
     opacity: 0;
+    transform: rotateZ(-45deg);
+    width: 1.5rem;
   }
 }
 
 .cup {
-  height: 15rem;
-  width: 18rem;
+  background-color: rgba(255, 255, 255, 0.65);
   border: 0.8rem solid black;
   border-bottom: 2.2rem solid black;
   border-radius: 0.8rem 0.8rem 2rem 2rem;
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.65);
+  height: 15rem;
   left: 50%;
+  position: absolute;
   transform: translate(-50%, -100%);
+  width: 18rem;
+
   ul {
     display: none;
     margin: 0;
@@ -203,15 +208,16 @@
     top: -6rem;
     transform: translateX(19%);
     width: 100%;
+
     li {
-      list-style: none;
-      width: 0.2rem;
-      height: 4rem;
-      background-color: #FFF;
-      float: left;
-      margin: 1rem;
-      filter: blur(0.3rem);
       animation: animateSteam 2s infinite linear;
+      background-color: #FFF;
+      filter: blur(0.3rem);
+      float: left;
+      height: 4rem;
+      list-style: none;
+      margin: 1rem;
+      width: 0.2rem;
       &:nth-child(1) {
         animation-delay: 0.2s;
       }
@@ -232,58 +238,58 @@
 }
 
 .cupContent {
-  width: 100%;
+  align-items: center;
   background-color: brown;
   background-position: top right;
-  position: absolute;
   bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: #FFF;
-  font-weight: bold;
+  display: flex;
   font-size: 1.5rem;
+  font-weight: bold;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
 }
 
 .coffee {
-  @include contents;
+  @include content;
 }
 
 .milkFoam {
-  @include contents;
+  @include content;
 }
 
 .whippedCream {
-  @include contents;
+  @include content;
 }
 
 .steamedMilk {
-  @include contents;
+  @include content;
 }
 
 .chocolateSyrup {
-  @include contents;
+  @include content;
 }
 
 .hotWater {
-  @include contents;
+  @include content;
 }
 
 .cupHandle {
-  display:block;
-  width: 3rem;
-  height: 5rem;
-  border-top: 2rem solid black;
-  border-right: 1.2rem solid black;
   border-bottom: 1rem solid black;
   border-radius: 0 4rem 4rem 0;
+  border-right: 1.2rem solid black;
+  border-top: 2rem solid black;
+  display:block;
+  height: 5rem;
   transform: translate(18.5rem, 1.5rem);
+  width: 3rem;
 }
 
 .base {
-  height: 2rem;
-  width: 40rem;
   background-color: #ff4000;
   border-radius: 1rem 1rem 0.5rem 0.5rem;
+  height: 2rem;
   position: relative;
+  width: 40rem;
 }

@@ -1,42 +1,41 @@
 @import "mixins.scss";
 
 .headerContainer {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
   position: absolute;
-  transform: scale(1);
   top: 2vw;
+  transform: scale(1);
   @include smartphonesPortrait {
-    transform: scale(2);
     top: 12vw;
+    transform: scale(2);
   }
   @include smartphonesLandscape {
-    transform: scale(1);
     top: 2vw;
+    transform: scale(1);
   }
   @include tabletsPoirtrait {
-    transform: scale(2);
     top: 12vw;
+    transform: scale(2);
   }
   @include tabletsLandscape {
-    transform: scale(0.9);
     top: 2vw;
+    transform: scale(0.9);
   }
 }
 
 .header {
-  width: 30vw;
-  height: 6vw;
-  font-size: 4vw;
-  font-family: 'Lobster', cursive;
+  align-items: center;
   background-color: #FF6633;
-  text-align: center;
-  border-radius: 1vw;
   border: 0.3vw solid #000;
+  border-radius: 1vw;
   box-shadow: 0vw 0vw 1vw 0.2vw rgba(0,0,0,0.75);
   display: flex;
+  height: 6vw;
   justify-content: center;
-  align-items: center;
-
+  font-family: 'Lobster', cursive;
+  font-size: 4vw;
+  text-align: center;
+  width: 30vw;
 }

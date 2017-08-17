@@ -1,21 +1,22 @@
-$background: #D0885D;
-$primary: #70b37d;
 $alternate: #e14e54;
-$width: 9rem;
-$height: 5rem;
-$gaugewidth: 2rem;
+$background: #D0885D;
 $black: #000;
-$white: #fff;
+$gaugewidth: 2rem;
+$height: 5rem;
+$primary: #70b37d;
 $speed: 800ms;
-@mixin contents {
-  width: 100%;
-  background-position: top right;
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
+$white: #fff;
+$width: 9rem;
+
+@mixin content {
   align-items: center;
+  background-position: top right;
+  bottom: 0;
   color: #FFF;
-  font-weight: bold;
+  display: flex;
   font-size: 1.5rem;
+  font-weight: bold;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
 }
