@@ -6,30 +6,26 @@
   height: auto;
   opacity: 0.1;
   position: absolute;
-  transform: scale(1.8);
+  transform: scale(0.75);
   width: 40rem;
 
   @include smartphonesPortrait {
-    transform: scale(1.8);
+    transform: scale(1.5);
   }
   @include smartphonesLandscape {
     transform: scale(0.7);
   }
   @include tabletsPoirtrait {
-    transform: scale(1.8);
+    transform: scale(1.5);
   }
   @include tabletsLandscape {
-    transform: scale(0.6);
-    top: 0.5vw;
-  }
-  @include desktops {
-    transform: scale(0.8);
+    transform: scale(0.7);
   }
 }
 
 .panel {
   align-items: center;
-  background-color: #ff4000;
+  background-color: #FF4000;
   border-radius: 3rem 3rem 1rem 1rem;
   display: flex;
   justify-content: space-around;
@@ -40,7 +36,7 @@
 }
 
 .switch {
-  background-color: #cc0000;
+  background-color: #CC0000;
   border-radius: 50%;
   height: 3rem;
   width: 3rem;
@@ -137,7 +133,7 @@
   border-bottom: 0 transparent;
   border-left: 2rem solid transparent;
   border-right: 2rem solid transparent;
-  border-top: 35rem solid #527a7a;
+  border-top: 35rem solid #527A7A;
   height: 0;
   left: 50%;
   position: relative;
@@ -146,7 +142,7 @@
 }
 
 .groupHandleStick {
-  background-color: #4f2902;
+  background-color: #4F2902;
   border-radius: 1rem 0 0 1rem;
   content: "";
   display: block;
@@ -191,8 +187,8 @@
 
 .cup {
   background-color: rgba(255, 255, 255, 0.65);
-  border: 0.8rem solid black;
-  border-bottom: 2.2rem solid black;
+  border: 0.8rem solid #000;
+  border-bottom: 2.2rem solid #000;
   border-radius: 0.8rem 0.8rem 2rem 2rem;
   height: 15rem;
   left: 50%;
@@ -239,7 +235,7 @@
 
 .cupContent {
   align-items: center;
-  background-color: brown;
+  background-color: #A52A2A;
   background-position: top right;
   bottom: 0;
   color: #FFF;
@@ -252,46 +248,46 @@
 }
 
 .coffee {
-  @include content;
+  @include contents;
 }
 
 .milkFoam {
-  @include content;
+  @include contents;
   color: #000;
 }
 
 .whippedCream {
-  @include content;
+  @include contents;
   color: #000;
 }
 
 .steamedMilk {
-  @include content;
+  @include contents;
   color: #000;
 }
 
 .chocolateSyrup {
-  @include content;
+  @include contents;
 }
 
 .hotWater {
-  @include content;
+  @include contents;
   color: #000;
 }
 
 .cupHandle {
-  border-bottom: 1rem solid black;
+  border-bottom: 1rem solid #000;
   border-radius: 0 4rem 4rem 0;
-  border-right: 1.2rem solid black;
-  border-top: 2rem solid black;
-  display:block;
+  border-right: 1.2rem solid #000;
+  border-top: 2rem solid #000;
+  display: block;
   height: 5rem;
   transform: translate(18.5rem, 1.5rem);
   width: 3rem;
 }
 
 .base {
-  background-color: #ff4000;
+  background-color: #FF4000;
   border-radius: 1rem 1rem 0.5rem 0.5rem;
   height: 2rem;
   position: relative;

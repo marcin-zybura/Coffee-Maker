@@ -4,28 +4,27 @@
   animation-duration: 1s;
   animation-name: showDialogBox;
   background: rgba(255, 102, 51, 0.5);
-  border: 0.3vw solid #000;
-  border-radius: 1vw;
-  box-shadow: 0vw 0vw 1.8vw 0.8vw rgba(0,0,0,0.75);
-  display: inline-block;
-  font-size: 3vw;
-  height: 20vw;
-  padding: 1.5vw;
+  border: 0.3rem solid #000;
+  border-radius: 1rem;
+  box-shadow: 0rem 0rem 1.5rem 0.5rem rgba(0,0,0,0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 4rem;
+  height: 28rem;
+  padding: 2rem;
   position: relative;
   text-align: center;
-  width: 60vw;
+  width: 80rem;
 
   @include smartphonesPortrait {
-    transform: scale(1.4);
+    transform: scale(1);
   }
   @include smartphonesLandscape {
-    transform: scale(1);
-  }
-  @include tabletsPoirtrait {
-    transform: scale(1.4);
+    transform: scale(0.8);
   }
   @include tabletsLandscape {
-    transform: scale(1);
+    transform: scale(0.9);
   }
 
   span.title {
@@ -46,24 +45,24 @@
   .btnNext {
     align-items: center;
     background-color: #FF6633;
-    border: 0.1vw solid #000;
-    border-radius: 0.5vw;
-    box-shadow: 0vw 0vw 0.8vw 0.2vw rgba(0,0,0,0.75);
+    border: 0.1rem solid #000;
+    border-radius: 0.8rem;
+    box-shadow: 0vw 0vw 1rem 0.2rem rgba(0,0,0,0.75);
     display: flex;
     justify-content: center;
-    font-size: 3vw;
-    height: 4vw;
-    margin-top: 2.5vw;
-    padding: 0.5vw;
-    width: 12vw;
+    font-size: 4rem;
+    height: 5rem;
+    margin-top: 3rem;
+    padding: 0.8rem;
+    width: 15rem;
     &:hover {
-      background-color: #ffb399;
+      background-color: #FFB399;
+      box-shadow: 0vw 0vw 1.5rem 0.9rem rgba(0,0,0,0.75);
       transform: scale(1.1);
-      box-shadow: 0vw 0vw 1.5vw 0.9vw rgba(0,0,0,0.75);
     }
 
     a {
-      color: black;
+      color: #000;
       text-decoration: none;
     }
   }
@@ -71,28 +70,25 @@
 
 .hintBox {
   background: rgba(255, 102, 51, 0.5);
-  border: 0.3vw solid #000;
-  border-radius: 1vw;
-  box-shadow: 0vw 0vw 0.8vw 0.2vw rgba(0,0,0,0.75);
+  border: 0.3rem solid #000;
+  border-radius: 1rem;
+  box-shadow: 0rem 0rem 1.5rem 0.5rem rgba(0,0,0,0.75);
   display: none;
-  font-size: 3vw;
-  height: 20vw;
-  padding: 2vw;
+  font-size: 4rem;
+  height: 25rem;
+  padding: 3rem;
   text-align: center;
-  width: 50vw;
+  width: 65rem;
   z-index: 1;
 
   @include smartphonesPortrait {
-    transform: scale(1.4);
+    transform: scale(0.9);
   }
   @include smartphonesLandscape {
-    transform: scale(1);
-  }
-  @include tabletsPoirtrait {
-    transform: scale(1.4);
+    transform: scale(0.8);
   }
   @include tabletsLandscape {
-    transform: scale(1);
+    transform: scale(0.9);
   }
 
   span.spanOK {
@@ -111,23 +107,23 @@
   .btnOK {
     align-items: center;
     background-color: #FF6633;
-    border: 0.1vw solid #000;
-    border-radius: 0.5vw;
-    box-shadow: 0vw 0vw 0.8vw 0.2vw rgba(0,0,0,0.75);
+    border: 0.1rem solid #000;
+    border-radius: 0.8rem;
+    box-shadow: 0vw 0vw 1rem 0.2rem rgba(0,0,0,0.75);
     display: flex;
-    height: 4vw;
+    height: 5rem;
     justify-content: center;
-    padding: 0.5vw;
+    padding: 0.8rem;
     text-align: center;
-    width: 5vw;
+    width: 8rem;
     &:hover {
       background-color: #ffb399;
-      box-shadow: 0vw 0vw 1.5vw 0.9vw rgba(0,0,0,0.75);
+      box-shadow: 0vw 0vw 1.5rem 0.9rem rgba(0,0,0,0.75);
       transform: scale(1.1);
     }
 
     a {
-      color: black;
+      color: #000;
       text-decoration: none;
     }
   }
@@ -136,55 +132,56 @@
 .menu {
   display: none;
   height: auto;
-  margin-top: 2vw;
+  margin-top: 4rem;
 
   @include smartphonesPortrait {
-    transform: scale(2.4);
+    transform: scale(1.5);
   }
   @include smartphonesLandscape {
-    transform: scale(1);
+    transform: scale(0.8);
   }
   @include tabletsPoirtrait {
-    transform: scale(2.4);
+    transform: scale(1.5);
   }
   @include tabletsLandscape {
-    transform: scale(1);
-  }
-  @include desktops {
-    transform: scale(1);
+    transform: scale(0.8);
   }
 
   .menuTitleContainer{
     align-items: center;
     display: flex;
     justify-content: center;
+    position: relative;
   }
 
   .menuTitle {
     font-family: 'Lobster', cursive;
-    font-size: 2vw;
+    font-size: 2.5rem;
     text-align: center;
   }
 
   .closeMenuCross {
-    font-size: 2vw;
+    font-size: 2.5rem;
     position: absolute;
     right: 0;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   ul {
     display: inline-block;
     margin-top: 1rem;
-    width: 35vw;
+    width: 45rem;
   }
 
   li {
     font-family: 'Lobster', cursive;
-    font-size: 1.9vw;
+    font-size: 2rem;
     list-style: none;
-    margin-bottom: 0.5vw;
-    outline: #000 solid 0.2vw;
-    padding: 0.25vw 0;
+    margin-bottom: 0.8rem;
+    outline: #000 solid 0.2rem;
+    padding: 0.3rem 0;
     text-align: center;
     &:hover {
       background-color: #ff6633;
