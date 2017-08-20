@@ -603,14 +603,3 @@ $(function() {
   americano.on("click", fillAmericano);
   latteMacchiato.on("click", fillLatteMacchiato);
 });
-
-
-
-
-
-/*
-RZECZY DO ZAPYTANIA
-1. JAK ZROBIĆ, ŻEBY MENU ZNIKAŁO PO KLIKNIĘCIU POZA NIM
-2. DLACZEGO NA MOZILLI JEST BIAŁA KRESKA MIĘDZY SPODEM KUBKA A ZAWARTOŚCIĄ
-  TO SAMO NA UCHU KUBKA
-*/
