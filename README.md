@@ -1,17 +1,18 @@
 # Coffee-Maker
-Animowany ekspres do kawy.
 
-Technologie, których użyłem w projekcie:
-HTML, CSS, Sass, Gulp, jQuery, ES6
+Animated coffee machine.
 
-Po załadowaniu strony pojawiają się okienka zachęcające do interakcji.
+Technologies used in project: HTML, CSS, Sass, Gulp, jQuery, ES6 (fat arrows mainly).
 
-Ekspres umożliwia wybranie kawy po wciśnięciu migającego guzika.
+After loading the page, there are windows that encourage interaction.
 
-Kawę wybiera się z menu.
+The coffee machine allows you to select coffee by pressing a blinking button.
 
-Po wybraniu kawy z menu zaczyna się wykonywać animacja, pokazująca z jakich warstw składa się dana kawa.
+Coffee is selected from the menu.
 
-Na animacje składają się: nalewanie zawartości kubka, animowane krople kawy spadające do kubka oraz wskaźnik, który przemieszcza się z pozycji 0 stopni (0% nalanej kawy) do 180 stopni (100% nalanej kawy).
+After selecting coffee from the menu, an animation starts to show what layers the coffee is made of.
 
-Po zakończeniu nalewania kawy możliwe jest ponowne wybranie kawy z menu po kliknięciu czerwonego guzika.
+The animations consist of: pouring the contents of the cup, animated drops of coffee falling into the cup and a pointer that moves from 0 degrees (0% of the used coffee) to 180 degrees (100% of the coffee).
+
+
+After finishing pouring coffee it is possible to re-select coffee from the menu after clicking the red button.
